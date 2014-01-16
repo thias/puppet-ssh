@@ -148,8 +148,19 @@ X11Forwarding yes
 # override default of no subsystems
 Subsystem	sftp	/usr/libexec/openssh/sftp-server
 
+<% if @match -%>
+# Overriden settings
+<% @match.sort_by {|key,value| key}.each do |key,value| -%>
+Match <%= key %>
+ <%- value.each do |paramname,paramvalue| -%>
+ <%= paramname %> <%= paramvalue %>
+ <%- end -%>
+<% end -%>
+
+<% else -%>
 # Example of overriding settings on a per-user basis
 #Match User anoncvs
 #	X11Forwarding no
 #	AllowTcpForwarding no
 #	ForceCommand cvs server
+<% end -%>
