@@ -149,7 +149,7 @@ X11Forwarding yes
 Subsystem	sftp	/usr/libexec/openssh/sftp-server
 
 <% if @match -%>
-# Overriden settings
+# Overridden settings
 <% @match.sort_by {|key,value| key}.each do |key,value| -%>
 Match <%= key %>
  <%- value.each do |paramname,paramvalue| -%>
