@@ -137,6 +137,9 @@ X11Forwarding yes
 #ClientAliveCountMax 3
 #ShowPatchLevel no
 #UseDNS yes
+<% if @usedns -%>
+UseDNS <%= usedns %>
+<% end -%>
 #PidFile /var/run/sshd.pid
 #MaxStartups 10
 #PermitTunnel no
