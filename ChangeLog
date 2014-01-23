@@ -1,3 +1,5 @@
+* Fix for missing '@' prefix of @usedns in template.
+
 2014-01-16 - 0.1.2
 * Support UseDNS sshd_config option.
 
