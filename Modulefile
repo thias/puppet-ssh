@@ -1,5 +1,5 @@
 name 'thias-ssh'
-version '0.1.2'
+version '0.1.3'
 source 'git://github.com/thias/puppet-ssh'
 author 'Matthias Saou'
 license 'Apache 2.0'
