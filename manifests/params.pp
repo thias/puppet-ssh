@@ -1,7 +1,7 @@
 class ssh::params {
 
   case "${::operatingsystem}-${::operatingsystemmajrelease}" {
-    'RedHat-6': {
+    'RedHat-6','CentOS-6': {
       $template_dir = "rhel6"
       $service_name = 'sshd'
       $service_restart = "/sbin/service ${service_name} reload"
