@@ -1,5 +1,6 @@
 * Update template to match the current EL 6.5 file.
-* Support CentOS.
+* Add support for CentOS.
+* Add support for RHEL 7.
 
 2014-01-29 - 0.1.3
 * Fix for missing '@' prefix of @usedns in template.
