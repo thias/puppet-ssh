@@ -9,14 +9,16 @@
 #     include '::ssh::sshd_config'
 #
 class ssh::sshd_config (
-  $port                   = undef,
-  $permitrootlogin        = undef,
-  $pubkeyauthentication   = undef,
-  $passwordauthentication = undef,
-  $x11forwarding          = undef,
-  $usedns                 = undef,
-  $match                  = undef,
-  $template_dir           = $::ssh::params::template_dir,
+  $port                            = undef,
+  $permitrootlogin                 = undef,
+  $pubkeyauthentication            = undef,
+  $passwordauthentication          = undef,
+  $challengeresponseauthentication = undef,
+  $usepam                          = undef,
+  $x11forwarding                   = undef,
+  $usedns                          = undef,
+  $match                           = undef,
+  $template_dir                    = $::ssh::params::template_dir,
 ) inherits ::ssh::params {
 
   include '::ssh::service'

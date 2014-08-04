@@ -121,7 +121,11 @@ GSSAPICleanupCredentials yes
 # WARNING: 'UsePAM no' is not supported in Red Hat Enterprise Linux and may cause several
 # problems.
 #UsePAM no
+<% if @usepam -%>
+UsePAM <%= @usepam %>
+<% else -%>
 UsePAM yes
+<% end -%>
 
 #AllowAgentForwarding yes
 #AllowTcpForwarding yes
