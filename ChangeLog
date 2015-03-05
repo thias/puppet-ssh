@@ -1,5 +1,7 @@
 2015-03-05 - 
 * Added option to configure SSH banner.
+* Added options for clientalivetimeout and clientalivecountmax
+* Added option to configure internal sftp
 
 2014-08-26 - 
 * Add support for Scientific Linux 6.

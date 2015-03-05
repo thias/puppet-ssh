@@ -170,7 +170,7 @@ Banner <%= @bannerpath %>
 <% if @internalsftp -%>
 Subsystem       sftp    internal-sftp
 <% else -%>
-Subsystem       sftp    /usr/lib64/misc/sftp-server
+Subsystem	sftp	/usr/libexec/openssh/sftp-server
 <% end -%>
 
 <% if @match -%>
