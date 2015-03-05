@@ -134,7 +134,13 @@ PrintLastLog no
 UsePrivilegeSeparation sandbox		# Default for new installations.
 #PermitUserEnvironment no
 #Compression delayed
+<% if @clientaliveinterval -%>
+ClientAliveInterval <%= @clientaliveinterval %>
+<% end -%>
 #ClientAliveInterval 0
+<% if @clientalivecountmax -%>
+ClientAliveCountMax <%= @clientalivecountmax %>
+<% end -%>
 #ClientAliveCountMax 3
 #UseDNS yes
 <% if @usedns -%>

@@ -141,7 +141,13 @@ X11Forwarding yes
 #UsePrivilegeSeparation yes
 #PermitUserEnvironment no
 #Compression delayed
+<% if @clientaliveinterval -%>
+ClientAliveInterval <%= @clientaliveinterval %>
+<% end -%>
 #ClientAliveInterval 0
+<% if @clientalivecountmax -%>
+ClientAliveCountMax <%= @clientalivecountmax %>
+<% end -%>
 #ClientAliveCountMax 3
 #ShowPatchLevel no
 #UseDNS yes

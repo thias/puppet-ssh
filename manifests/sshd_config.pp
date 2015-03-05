@@ -16,6 +16,8 @@ class ssh::sshd_config (
   $challengeresponseauthentication = undef,
   $usepam                          = undef,
   $x11forwarding                   = undef,
+  $clientaliveinterval             = undef,
+  $clientalivecountmax             = undef,
   $usedns                          = undef,
   $bannerpath                      = undef,
   $match                           = undef,
