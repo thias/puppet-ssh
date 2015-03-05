@@ -176,7 +176,11 @@ Banner <%= @bannerpath %>
 #LpkPubKeyAttr sshPublicKey
 
 # override default of no subsystems
-Subsystem	sftp	/usr/lib64/misc/sftp-server
+<% if @internalsftp -%>
+Subsystem       sftp    internal-sftp
+<% else -%>
+Subsystem       sftp    /usr/lib64/misc/sftp-server
+<% end -%>
 
 # the following are HPN related configuration options
 # tcp receive buffer polling. disable in non autotuning kernels

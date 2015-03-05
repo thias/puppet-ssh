@@ -167,7 +167,11 @@ Banner <%= @bannerpath %>
 <% end -%>
 
 # override default of no subsystems
-Subsystem	sftp	/usr/libexec/openssh/sftp-server
+<% if @internalsftp -%>
+Subsystem       sftp    internal-sftp
+<% else -%>
+Subsystem       sftp    /usr/lib64/misc/sftp-server
+<% end -%>
 
 <% if @match -%>
 # Overridden settings

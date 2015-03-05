@@ -21,6 +21,7 @@ class ssh::sshd_config (
   $usedns                          = undef,
   $bannerpath                      = undef,
   $match                           = undef,
+  $internalsftp                    = false,
   $template_dir                    = $::ssh::params::template_dir,
 ) inherits ::ssh::params {
 

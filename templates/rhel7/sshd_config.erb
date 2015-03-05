@@ -178,7 +178,11 @@ AcceptEnv LC_IDENTIFICATION LC_ALL LANGUAGE
 AcceptEnv XMODIFIERS
 
 # override default of no subsystems
+<% if @internalsftp -%>
+Subsystem       sftp    internal-sftp
+<% else -%>
 Subsystem	sftp	/usr/libexec/openssh/sftp-server
+<% end -%>
 
 # Uncomment this if you want to use .local domain
 #Host *.local
