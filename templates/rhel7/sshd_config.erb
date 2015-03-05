@@ -159,7 +159,11 @@ UseDNS <%= @usedns %>
 #VersionAddendum none
 
 # no default banner path
+<% if @bannerpath -%>
+Banner <%= @bannerpath %>
+<% else -%>
 #Banner none
+<% end -%>
 
 # Accept locale-related environment variables
 AcceptEnv LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES

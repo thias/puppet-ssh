@@ -147,7 +147,11 @@ UseDNS <%= @usedns %>
 #VersionAddendum none
 
 # no default banner path
+<% if @bannerpath -%>
+Banner <%= @bannerpath %>
+<% else -%>
 #Banner none
+<% end -%>
 
 # here are the new patched ldap related tokens
 # entries in your LDAP must have posixAccount & ldapPublicKey objectclass

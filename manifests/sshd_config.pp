@@ -17,6 +17,7 @@ class ssh::sshd_config (
   $usepam                          = undef,
   $x11forwarding                   = undef,
   $usedns                          = undef,
+  $bannerpath                      = undef,
   $match                           = undef,
   $template_dir                    = $::ssh::params::template_dir,
 ) inherits ::ssh::params {

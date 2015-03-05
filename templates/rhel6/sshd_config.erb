@@ -154,7 +154,11 @@ UseDNS <%= @usedns %>
 #ChrootDirectory none
 
 # no default banner path
+<% if @bannerpath -%>
+Banner <%= @bannerpath %>
+<% else -%>
 #Banner none
+<% end -%>
 
 # override default of no subsystems
 Subsystem	sftp	/usr/libexec/openssh/sftp-server
