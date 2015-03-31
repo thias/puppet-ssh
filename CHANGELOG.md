@@ -1,3 +1,6 @@
+#### 2015-03-31 - 1.0.2
+* Add clientalive*, bannerpath and internalsftp options (@tracyde).
+
 #### 2015-03-31 - 1.0.1
 * Fix Gentoo in params, now that it has a majrelease (3 as of now).
 * Cleanups to make Puppet Lint and Forge score happy.

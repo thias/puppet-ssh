@@ -141,7 +141,13 @@ X11Forwarding yes
 #UsePrivilegeSeparation yes
 #PermitUserEnvironment no
 #Compression delayed
+<% if @clientaliveinterval -%>
+ClientAliveInterval <%= @clientaliveinterval %>
+<% end -%>
 #ClientAliveInterval 0
+<% if @clientalivecountmax -%>
+ClientAliveCountMax <%= @clientalivecountmax %>
+<% end -%>
 #ClientAliveCountMax 3
 #ShowPatchLevel no
 #UseDNS yes
@@ -154,10 +160,18 @@ UseDNS <%= @usedns %>
 #ChrootDirectory none
 
 # no default banner path
+<% if @bannerpath -%>
+Banner <%= @bannerpath %>
+<% else -%>
 #Banner none
+<% end -%>
 
 # override default of no subsystems
+<% if @internalsftp -%>
+Subsystem	sftp	internal-sftp
+<% else -%>
 Subsystem	sftp	/usr/libexec/openssh/sftp-server
+<% end -%>
 
 <% if @match -%>
 # Overridden settings

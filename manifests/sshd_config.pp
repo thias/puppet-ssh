@@ -16,8 +16,12 @@ class ssh::sshd_config (
   $challengeresponseauthentication = undef,
   $usepam                          = undef,
   $x11forwarding                   = undef,
+  $clientaliveinterval             = undef,
+  $clientalivecountmax             = undef,
   $usedns                          = undef,
+  $bannerpath                      = undef,
   $match                           = undef,
+  $internalsftp                    = false,
   $template_dir                    = $::ssh::params::template_dir,
   $service_name                    = $::ssh::params::service_name,
 ) inherits ::ssh::params {

@@ -134,7 +134,13 @@ PrintLastLog no
 UsePrivilegeSeparation sandbox		# Default for new installations.
 #PermitUserEnvironment no
 #Compression delayed
+<% if @clientaliveinterval -%>
+ClientAliveInterval <%= @clientaliveinterval %>
+<% end -%>
 #ClientAliveInterval 0
+<% if @clientalivecountmax -%>
+ClientAliveCountMax <%= @clientalivecountmax %>
+<% end -%>
 #ClientAliveCountMax 3
 #UseDNS yes
 <% if @usedns -%>
@@ -147,7 +153,11 @@ UseDNS <%= @usedns %>
 #VersionAddendum none
 
 # no default banner path
+<% if @bannerpath -%>
+Banner <%= @bannerpath %>
+<% else -%>
 #Banner none
+<% end -%>
 
 # here are the new patched ldap related tokens
 # entries in your LDAP must have posixAccount & ldapPublicKey objectclass
@@ -166,7 +176,11 @@ UseDNS <%= @usedns %>
 #LpkPubKeyAttr sshPublicKey
 
 # override default of no subsystems
-Subsystem	sftp	/usr/lib64/misc/sftp-server
+<% if @internalsftp -%>
+Subsystem       sftp    internal-sftp
+<% else -%>
+Subsystem       sftp    /usr/lib64/misc/sftp-server
+<% end -%>
 
 # the following are HPN related configuration options
 # tcp receive buffer polling. disable in non autotuning kernels
