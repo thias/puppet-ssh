@@ -19,6 +19,7 @@ class ssh::sshd_config (
   $usedns                          = undef,
   $match                           = undef,
   $template_dir                    = $::ssh::params::template_dir,
+  $service_name                    = $::ssh::params::service_name,
 ) inherits ::ssh::params {
 
   include '::ssh::service'
@@ -32,4 +33,3 @@ class ssh::sshd_config (
   }
 
 }
-

@@ -11,11 +11,10 @@ class ssh::service (
   # on others.
 
   service { $service_name :
-    ensure    => running,
+    ensure    => 'running',
     enable    => true,
     hasstatus => true,
     restart   => $service_restart,
   }
 
 }
-
