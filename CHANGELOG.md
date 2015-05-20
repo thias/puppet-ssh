@@ -1,3 +1,6 @@
+* Update rhel7 sshd_config to match the current 7.1 one.
+* Tested on Puppet 4.0.0.
+
 #### 2015-03-31 - 1.0.2
 * Add clientalive*, bannerpath and internalsftp options (@tracyde).
 
