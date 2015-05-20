@@ -1,3 +1,4 @@
+#### 2015-05-20 - 1.0.3
 * Update rhel7 sshd_config to match the current 7.1 one.
 * Tested on Puppet 4.0.0.
 
