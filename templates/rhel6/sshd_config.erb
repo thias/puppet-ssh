@@ -175,9 +175,9 @@ Subsystem	sftp	/usr/libexec/openssh/sftp-server
 
 <% if @match -%>
 # Overridden settings
-<% @match.sort_by {|key,value| key}.each do |key,value| -%>
+<% @match.sort_by {|k,v| k}.each do |key,value| -%>
 Match <%= key %>
- <%- value.each do |paramname,paramvalue| -%>
+ <%- value.sort_by {|k,v| k}.each do |paramname,paramvalue| -%>
  <%= paramname %> <%= paramvalue %>
  <%- end -%>
 <% end -%>
