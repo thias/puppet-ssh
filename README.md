@@ -1,5 +1,7 @@
 # puppet-ssh
 
+[![Build Status](https://travis-ci.org/thias/puppet-ssh.png?branch=master)](https://travis-ci.org/thias/puppet-ssh)
+
 ## Overview
 
 Install, enable and configure ssh and sshd.
