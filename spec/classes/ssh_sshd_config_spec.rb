@@ -11,7 +11,8 @@ describe 'ssh::sshd_config' do
   describe 'Test default sshd configuration' do
     it { should contain_class('ssh::service') }
     it { should contain_file('/etc/ssh/sshd_config') \
-      .without_content(/^Port/)
+      .without_content(/^Port/) \
+      .without_content(/^PermitRootLogin/)
     }
   end
 
@@ -27,6 +28,13 @@ describe 'ssh::sshd_config' do
     let(:params) { { :port => '2222' } }
     it { should contain_file('/etc/ssh/sshd_config') \
       .with_content(/^Port 2222$/)
+    }
+  end
+
+  describe 'Test sshd_config permitrootlogin' do
+    let(:params) { { :permitrootlogin => 'yes' } }
+    it { should contain_file('/etc/ssh/sshd_config') \
+      .with_content(/^PermitRootLogin yes$/)
     }
   end
 
