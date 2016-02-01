@@ -1,3 +1,4 @@
+#### 2016-02-01 - 1.0.4
 * Fix hash ordering consistency for sshd_config match.
 * Include rspec tests.
 
