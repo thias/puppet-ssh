@@ -58,11 +58,11 @@ PubkeyAuthentication <%= @pubkeyauthentication %>
 #AuthorizedKeysFile	.ssh/authorized_keys
 #AuthorizedKeysCommand none
 <% if @authorizedkeyscommand -%>
-AuthorizedKeysCommand <%= @authorizedkeyscommand%>
+AuthorizedKeysCommand <%= @authorizedkeyscommand %>
 <% end -%>
 #AuthorizedKeysCommandRunAs nobody
 <% if @authorizedkeyscommanduser -%>
-AuthorizedKeysCommandRunAs <%= @authorizedkeyscommanduser%>
+AuthorizedKeysCommandRunAs <%= @authorizedkeyscommanduser %>
 <% end -%>
 
 # For this to work you will also need host keys in /etc/ssh/ssh_known_hosts
