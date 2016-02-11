@@ -23,7 +23,11 @@ Port <%= @port %>
 #ListenAddress ::
 
 # The default requires explicit activation of protocol 1
+<% if @protocol -%>
+Protocol <%= @protocol %>
+<% else -%>
 #Protocol 2
+<% end -%>
 
 # HostKey for protocol version 1
 #HostKey /etc/ssh/ssh_host_key
@@ -38,6 +42,12 @@ HostKey /etc/ssh/ssh_host_ed25519_key
 #ServerKeyBits 1024
 
 # Ciphers and keying
+<% if @ciphers -%>
+Ciphers <%= @ciphers %>
+<% end -%>
+<% if @macs -%>
+MACs <%= @macs %>
+<% end -%>
 #RekeyLimit default none
 
 # Logging
@@ -90,7 +100,11 @@ AuthorizedKeysCommandUser <%= @authorizedkeyscommanduser %>
 
 # To disable tunneled clear text passwords, change to no here!
 #PasswordAuthentication yes
+<% if @permitemptypasswords -%>
+PermitEmptyPasswords <%= @permitemptypasswords %>
+<% else -%>
 #PermitEmptyPasswords no
+<% end -%>
 <% if @passwordauthentication -%>
 PasswordAuthentication <%= @passwordauthentication %>
 <% else -%>
@@ -148,7 +162,11 @@ X11Forwarding yes
 #TCPKeepAlive yes
 #UseLogin no
 UsePrivilegeSeparation sandbox		# Default for new installations.
+<% if @permituserenvironment -%>
+PermitUserEnvironment <%= @permituserenvironment %>
+<% else -%>
 #PermitUserEnvironment no
+<% end -%>
 #Compression delayed
 <% if @clientaliveinterval -%>
 ClientAliveInterval <%= @clientaliveinterval %>

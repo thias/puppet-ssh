@@ -10,12 +10,17 @@
 #
 class ssh::sshd_config (
   $port                            = undef,
+  $protocol                        = undef,
+  $ciphers                         = undef,
+  $macs                            = undef,
   $permitrootlogin                 = undef,
   $pubkeyauthentication            = undef,
+  $permitemptypasswords            = undef,
   $passwordauthentication          = undef,
   $challengeresponseauthentication = undef,
   $usepam                          = undef,
   $x11forwarding                   = undef,
+  $permituserenvironment           = undef,
   $clientaliveinterval             = undef,
   $clientalivecountmax             = undef,
   $usedns                          = undef,
