@@ -28,13 +28,6 @@ describe 'ssh::params' do
     it { should compile }
   end
 
-  context 'Parameters for Gentoo' do
-    let(:facts) {{
-      :operatingsystem => 'Gentoo',
-    }}
-    it { should compile }
-  end
-
   context 'Parameters for Debian' do
     let(:facts) {{
       :operatingsystem           => 'Debian',

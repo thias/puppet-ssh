@@ -1,3 +1,5 @@
+* Remove Gentoo support, unused by me now, and nobody else uses it.
+
 #### 2016-02-05 - 1.0.5
 * Added authorizedkeyscommand and authorizedkeyscommanduser options (@scrat14)
 

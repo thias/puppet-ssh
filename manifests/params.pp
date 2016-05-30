@@ -15,11 +15,6 @@ class ssh::params {
       $service_name = 'sshd'
       $service_restart = "/usr/bin/systemctl reload ${service_name}.service"
     }
-    /^Gentoo/: {
-      $template_dir = 'gentoo'
-      $service_name = 'sshd'
-      $service_restart = "/sbin/rc-service ${service_name} reload"
-    }
     default: {
       # Bail out, we need the original file to create a template and add the
       # configuration above.
