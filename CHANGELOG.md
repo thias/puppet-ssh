@@ -1,4 +1,5 @@
 * Remove Gentoo support, unused by me now, and nobody else uses it.
+* Add parameters to meet the SCAP ospp-rhel7-server profile (#5, @roysjosh).
 
 #### 2016-02-05 - 1.0.5
 * Added authorizedkeyscommand and authorizedkeyscommanduser options (@scrat14)
