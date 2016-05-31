@@ -1,3 +1,4 @@
+#### 2016-05-31 - 1.0.6
 * Remove Gentoo support, unused by me now, and nobody else uses it.
 * Add parameters to meet the SCAP ospp-rhel7-server profile (#5, @roysjosh).
 
