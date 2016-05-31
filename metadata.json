@@ -1,6 +1,6 @@
 {
   "name": "thias-ssh",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "Matthias Saou",
   "license": "Apache-2.0",
   "summary": "SSH module",
@@ -21,11 +21,11 @@
   "requirements": [
     {
     "name": "pe",
-    "version_requirement": "3.x"
+    "version_requirement": ">= 3.0.0 <2017"
     },
     {
     "name": "puppet",
-    "version_requirement": ">=2.7.20 <4.1.0"
+    "version_requirement": ">=2.7.20 <5.0.0"
     }
   ],
   "description": "Install, enable and configure ssh and sshd.",
