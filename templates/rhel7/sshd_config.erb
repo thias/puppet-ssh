@@ -19,8 +19,16 @@
 Port <%= @port %>
 <% end -%>
 #AddressFamily any
+<%if @ipv4 -%>
+ListenAddress <%= @ipv4 %>
+<% else -%>
 #ListenAddress 0.0.0.0
+<% end -%>
+<%if @ipv6 -%>
+ListenAddress <%= @ipv6 %>
+<% else -%>
 #ListenAddress ::
+<% end -%>
 
 # The default requires explicit activation of protocol 1
 <% if @protocol -%>
