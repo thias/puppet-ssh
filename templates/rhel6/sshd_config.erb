@@ -157,7 +157,11 @@ X11Forwarding <%= @x11forwarding %>
 X11Forwarding yes
 <% end -%>
 #X11DisplayOffset 10
+<% if @x11uselocalhost -%>
+X11UseLocalhost <%= @x11uselocalhost %>
+<% else -%>
 #X11UseLocalhost yes
+<% end -%>
 #PrintMotd yes
 #PrintLastLog yes
 #TCPKeepAlive yes
