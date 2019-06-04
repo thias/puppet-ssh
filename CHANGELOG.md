@@ -1,3 +1,6 @@
+#### 2019-06-04 - 1.0.8
+* Enable support for RHEL8.
+
 #### 2016-05-31 - 1.0.7
 * Update Gemfile to fix travis-ci tests with ruby 1.8.
 * Update metadata for newer Puppet compatibility.
