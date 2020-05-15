@@ -10,6 +10,8 @@
 #
 class ssh::sshd_config (
   $port                            = undef,
+  $ipv4                            = undef,
+  $ipv6                            = undef,
   $protocol                        = undef,
   $ciphers                         = undef,
   $macs                            = undef,
