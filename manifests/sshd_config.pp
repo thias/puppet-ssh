@@ -20,6 +20,7 @@ class ssh::sshd_config (
   $challengeresponseauthentication = undef,
   $usepam                          = undef,
   $x11forwarding                   = undef,
+  $x11uselocalhost                 = undef,
   $permituserenvironment           = undef,
   $clientaliveinterval             = undef,
   $clientalivecountmax             = undef,
@@ -29,6 +30,8 @@ class ssh::sshd_config (
   $authorizedkeyscommand           = undef,
   $authorizedkeyscommanduser       = undef,
   $internalsftp                    = false,
+  $maxstartup                      = undef,
+  $maxsessions                     = undef,
   $template_dir                    = $::ssh::params::template_dir,
   $service_name                    = $::ssh::params::service_name,
 ) inherits ::ssh::params {
