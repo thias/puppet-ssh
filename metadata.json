@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "summary": "SSH module",
   "source": "https://github.com/thias/puppet-ssh",
-  "project_page": "https://forge.puppetlabs.com/thias/ssh",
+  "project_page": "https://github.com/thias/puppet-ssh",
   "issues_url": "https://github.com/thias/puppet-ssh/issues",
   "tags": ["ssh", "openssh", "sshd"],
   "operatingsystem_support": [
