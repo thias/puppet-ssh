@@ -17,6 +17,14 @@ Port <%= @port %>
 #AddressFamily any
 #ListenAddress 0.0.0.0
 #ListenAddress ::
+<%if @listenaddresses -%>
+<%if not @listenaddresses.kind_of?(Array) -%>
+<% @listenaddresses = [@listenaddresses,] -%>
+<% end -%>
+<% @listenaddresses.each do |listenaddress| -%>
+ListenAddress <%= listenaddress %>
+<% end -%>
+<% end -%>
 
 # Disable legacy (protocol version 1) support in the server for new
 # installations. In future the default will change to require explicit
