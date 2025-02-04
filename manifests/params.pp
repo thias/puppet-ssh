@@ -2,7 +2,7 @@
 #
 class ssh::params {
 
-  $os_name_maj = "${::operatingsystem}-${::operatingsystemmajrelease}"
+  $os_name_maj = "${facts['os']['name']}-${facts['os']['release']['major']}"
 
   case $os_name_maj {
     'RedHat-6','CentOS-6','Scientific-6': {
