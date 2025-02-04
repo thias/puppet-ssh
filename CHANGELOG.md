@@ -1,3 +1,6 @@
+#### 2022-06-28 - 1.0.9
+* Enable support for RHEL9.
+
 #### 2019-06-04 - 1.0.8
 * Enable support for RHEL8.
 
