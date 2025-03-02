@@ -21,6 +21,14 @@ Port <%= @port %>
 #AddressFamily any
 #ListenAddress 0.0.0.0
 #ListenAddress ::
+<%if @listenaddresses -%>
+<%if not @listenaddresses.kind_of?(Array) -%>
+<% @listenaddresses = [@listenaddresses,] -%>
+<% end -%>
+<% @listenaddresses.each do |listenaddress| -%>
+ListenAddress <%= listenaddress %>
+<% end -%>
+<% end -%>
 
 # The default requires explicit activation of protocol 1
 <% if @protocol -%>
