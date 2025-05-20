@@ -25,6 +25,11 @@ class ssh::params {
       $service_name = 'sshd'
       $service_restart = "/usr/bin/systemctl reload ${service_name}.service"
     }
+    'RedHat-10','CentOS-10': {
+      $template_dir = 'rhel10'
+      $service_name = 'sshd'
+      $service_restart = "/usr/bin/systemctl reload ${service_name}.service"
+    }
     default: {
       # Bail out, we need the original file to create a template and add the
       # configuration above.
